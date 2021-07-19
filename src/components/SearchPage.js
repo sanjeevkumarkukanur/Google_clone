@@ -1,10 +1,39 @@
-import React from 'react'
+import SearchIcon from '@material-ui/icons/Search'
+import MicIcon from '@material-ui/icons/Mic'
+import React, { useState } from 'react'
 import './SearchPage.css'
+import { Button } from '@material-ui/core'
+import { useHistory } from 'react-router-dom'
+
+
 function SearchPage() {
+
+    const [input ,setInput] = useState('')
+    const history = useHistory();
+
+    const search = (e) =>{
+        e.preventDefault()
+
+        console.log('heycjcjnckj', input)
+
+        history.push('/search')
+
+    }
+
     return (
-        <div>
-            <h1>hello sanjeev</h1>
-        </div>
+        <form className='searchpage'>
+            <div className="search__input">
+            <SearchIcon className='search__inputIcon' />
+            <input value={input} onChange={ e => setInput( e.target.value)} />
+            <MicIcon />
+            </div>
+            <div className="search_button">
+                <Button type='submit'
+                onClick={search} variant='outlined'>Google Search</Button>
+                <Button variant='outlined'>I'm Feeling Lucky</Button>
+            </div>
+
+        </form>
     )
 }
 
