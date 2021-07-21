@@ -3,7 +3,7 @@ import './Home.css'
 import { Link } from 'react-router-dom'
 import AppsIcon from '@material-ui/icons/Apps'
 import { Avatar } from '@material-ui/core'
-import SearchPage from './SearchPage'
+import Search from './Search'
 
 function Home() {
     return (
@@ -25,7 +25,7 @@ function Home() {
                 <img src='https://uwaterloo.ca/events/sites/ca.events/files/styles/wide-body-750px-wide/public/uploads/images/google-logo.jpg?itok=abYgzODd' alt='icon' />
                 </div> 
                 <div className="home__inputontainer">
-                    <SearchPage />
+                    <Search hideButtons />
                 </div>    
         </div>
     )

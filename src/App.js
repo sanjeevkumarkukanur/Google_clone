@@ -6,14 +6,15 @@ import {
 } from "react-router-dom";
 import './App.css';
 import Home from './components/Home';
+import SearchPage from './components/SearchPage';
 
 function App() {
   return (
     <div className="app">
       <Router>
         <Switch>
-        <Route path='/search'><h1>hey hello i m sanjeev</h1></Route>
-        <Route path='/' component={Home} /> 
+        <Route path='/search'><SearchPage /></Route>
+        <Route path='/'><Home /></Route> 
         </Switch>
       
 

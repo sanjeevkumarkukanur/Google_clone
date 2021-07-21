@@ -1,40 +1,26 @@
-import SearchIcon from '@material-ui/icons/Search'
-import MicIcon from '@material-ui/icons/Mic'
-import React, { useState } from 'react'
-import './SearchPage.css'
-import { Button } from '@material-ui/core'
-import { useHistory } from 'react-router-dom'
-
+import React from 'react';
+import './SearchPage';
+import { useStateValue} from '../StateProvider'
+import useGoogleSearch from '../useGoogleSearch'
 
 function SearchPage() {
+    const [{ term }, dispatch] = useStateValue();
+    const  { data }  = useGoogleSearch(term);
 
-    const [input ,setInput] = useState('')
-    const history = useHistory();
 
-    const search = (e) =>{
-        e.preventDefault()
-
-        console.log('heycjcjnckj', input)
-
-        history.push('/search')
-
-    }
+    console.log(data)
 
     return (
-        <form className='searchpage'>
-            <div className="search__input">
-            <SearchIcon className='search__inputIcon' />
-            <input value={input} onChange={ e => setInput( e.target.value)} />
-            <MicIcon />
+        <div className="searchPage">
+            <div className="searchPage__header">
+                <h1>{ term }</h1>
             </div>
-            <div className="search_button">
-                <Button type='submit'
-                onClick={search} variant='outlined'>Google Search</Button>
-                <Button variant='outlined'>I'm Feeling Lucky</Button>
-            </div>
+            <div className="searchPage__results">
 
-        </form>
+            </div>
+            
+        </div>
     )
 }
 
-export default SearchPage
+export default SearchPage;
