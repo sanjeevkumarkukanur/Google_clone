@@ -27,7 +27,7 @@ function SearchPage(hideButtons =  false) {
     }
 
     return (
-        <form className='searchpage'>
+        <form className='search'>
             <div className="search__input">
             <SearchIcon className='search__inputIcon' />
             <input value={input} onChange={ e => setInput( e.target.value)} />
