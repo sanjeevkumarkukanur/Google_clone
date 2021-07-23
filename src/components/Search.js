@@ -7,7 +7,7 @@ import { useHistory } from 'react-router-dom'
 import { useStateValue } from "../StateProvider";
 import { actionTypes} from "../reducer";
 
-function SearchPage(hideButtons =  false) {
+function Search(hideButtons =  false) {
 
     const [{ }, dispatch] = useStateValue();
     const [input ,setInput] = useState('')
@@ -51,4 +51,4 @@ function SearchPage(hideButtons =  false) {
     )
 }
 
-export default SearchPage
+export default Search

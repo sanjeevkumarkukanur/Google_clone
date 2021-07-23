@@ -37,3 +37,7 @@
     object-fit: contain;
     height: 100px;
 }
+.photo{
+    object-fit: contain;
+    height: 40px;
+}

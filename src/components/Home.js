@@ -17,7 +17,7 @@ function Home() {
                     <Link to='/gmail' >Gmail</Link>
                     <Link to='/images' >Images</Link>
                     <AppsIcon />
-                    <Avatar />
+                    <Avatar><img className="photo" src="https://avatars.githubusercontent.com/u/75248200?v=4" alt="" /></Avatar>
                 </div>
             </div>  
 
@@ -25,7 +25,7 @@ function Home() {
                 <img src='https://uwaterloo.ca/events/sites/ca.events/files/styles/wide-body-750px-wide/public/uploads/images/google-logo.jpg?itok=abYgzODd' alt='icon' />
                 </div> 
                 <div className="home__inputontainer">
-                    <Search hideButtons />
+                    <Search />
                 </div>    
         </div>
     )
