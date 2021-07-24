@@ -14,9 +14,6 @@ function SearchPage() {
     const [{ term }, dispatch] = useStateValue();
     const  { data }  = useGoogleSearch(term);
 
-
-    // const data= Response;
-
     return (
         <div className="searchPage">
             <div className="searchPage__header">
